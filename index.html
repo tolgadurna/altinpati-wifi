@@ -1,36 +1,85 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wi-Fi Bağlantı</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALTIN PATI PETSHOP Wi-Fi</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 100px;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 40px;
+        background: #fafafa;
+    }
 
-        button {
-            background: #ffcc00;
-            padding: 15px 25px;
-            border: none;
-            border-radius: 8px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
+    h1 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    button {
+        width: 80%;
+        background: #ffcc00;
+        border: none;
+        padding: 15px;
+        margin-top: 10px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:active {
+        transform: scale(0.97);
+    }
+
+    img {
+        margin-top: 20px;
+        width: 220px;
+        height: 220px;
+    }
+</style>
+
+<script>
+function copySSID() {
+    navigator.clipboard.writeText("ALTIN_PATI_PETSHOP");
+    alert("Wi-Fi adı kopyalandı!");
+}
+
+function copyPassword() {
+    navigator.clipboard.writeText("Tolga35altinpati");
+    alert("Şifre kopyalandı!");
+}
+</script>
+
 </head>
-
 <body>
 
-    <h2>ALTIN PATI PETSHOP Wi-Fi</h2>
-    <p>Aşağıdaki butona dokunarak ağa bağlanabilirsin.</p>
+<h1>ALTIN PATI PETSHOP Wi-Fi</h1>
+<p class="desc">Aşağıdaki QR kodu okutabilir veya bilgileri kopyalayabilirsin.</p>
 
-    <button onclick="window.location.href='WIFI:T:WPA;S:ALTIN_PATI_PETSHOP;P:Tolga35altinpati;;'">
-        Wi-Fi’ye Bağlan
-    </button>
+<div class="box">
+
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=WIFI:T:WPA;S:ALTIN_PATI_PETSHOP;P:Tolga35altinpati;;" alt="QR Kod">
+
+    <button onclick="copySSID()">Wi-Fi Adını Kopyala</button>
+    <button onclick="copyPassword()">Şifreyi Kopyala</button>
+
+    <p style="font-size:14px; margin-top:15px; color:#666;">
+        iPhone kullanıcıları: QR kodu kamerayla okutun veya bilgileri kopyalayın.<br>
+        Android kullanıcıları: NFC ile otomatik bağlanabilir.
+    </p>
+
+</div>
 
 </body>
 </html>
