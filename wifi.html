@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wi-Fi Bağlantı</title>
+<style>
+    body { 
+        font-family: Arial, sans-serif; 
+        text-align: center; 
+        background: #f7f7f7; 
+        padding: 40px;
+    }
+    .box {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 400px;
+        margin: auto;
+        box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    }
+    button {
+        background: #007bff;
+        padding: 15px 25px;
+        border: none;
+        color: white;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>ALTIN PATI PETSHOP Wi-Fi</h2>
+    <p>Aşağıdaki butona dokunarak ağı bağlayabilirsin.</p>
+
+    <button onclick="connectWifi()">Wi-Fi’ye Bağlan</button>
+</div>
+
+<script>
+function connectWifi() {
+    const wifiConfig = "WIFI:T:WPA2;S:ALTIN_PATI_PETSHOP;P:Tolga35altinpati;;";
+    window.location.href = "data:text/plain," + wifiConfig;
+}
+</script>
+
+</body>
+</html>
